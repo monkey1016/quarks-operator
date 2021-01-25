@@ -348,6 +348,15 @@ func JobSpecCopierContainer(releaseName string, jobImage string, volumeMountName
 			"-xc",
 			fmt.Sprintf("time sh -c 'mkdir -p %s && cp -ar %s/* %s && chown vcap:vcap %s -R'", inContainerReleasePath, VolumeJobsSrcDirMountPath, inContainerReleasePath, inContainerReleasePath),
 		},
+		SecurityContext: &corev1.SecurityContext{
+			RunAsUser: &rootUserID,
+		},
+		Env: []corev1.EnvVar{
+			{
+				Name:  "HOME",
+				Value: "/root",
+			},
+		},
 	}
 }
 
