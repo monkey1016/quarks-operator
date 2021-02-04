@@ -1,0 +1,19 @@
+image:
+  # org that provides the operator docker image.
+  org: 138829565407.dkr.ecr.us-east-2.amazonaws.com/chunks1016
+
+operator:
+  boshDNSDockerImage: 138829565407.dkr.ecr.us-east-2.amazonaws.com/ghcr.io/cfcontainerizationbot/coredns:0.1.0-1.6.7-bp152.1.19
+  hookDockerImage: 138829565407.dkr.ecr.us-east-2.amazonaws.com/ghcr.io/cfcontainerizationbot/kubecf-kubectl:v1.19.2
+
+quarks-job:
+  image:
+    org: 138829565407.dkr.ecr.us-east-2.amazonaws.com/ghcr.io/cloudfoundry-incubator
+
+quarks-secret:
+  image:
+    org: 138829565407.dkr.ecr.us-east-2.amazonaws.com/ghcr.io/cloudfoundry-incubator
+
+quarks-statefulset:
+  image:
+    org: 138829565407.dkr.ecr.us-east-2.amazonaws.com/ghcr.io/cloudfoundry-incubator
